@@ -54,7 +54,7 @@ ROOT_URLCONF = 'djangoproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/home/coder/notebook/djangoproject/djangoproject/templates"],
+        'DIRS': [os.path.normpath(os.path.join(BASE_DIR, "djangoproject/templates"))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,4 +119,4 @@ USE_TZ = True
 
 STATIC_URL = '/proxy/8000/static/'
 
-STATIC_ROOT = "/home/coder/notebook/djangoproject/static/"
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'static'))
